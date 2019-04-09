@@ -6,6 +6,7 @@ public class Clock {
     private Timed timed;
 
     public Clock(Timed timed){
+        this.timed = timed;
     }
 
     public Timed getTime() {

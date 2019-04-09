@@ -14,16 +14,16 @@ public class MyStepdefs {
     }
 
     @Given("Создаем экземпляр объекта время")
-    public void создаемЭкземплярОбъектаВремя() { time = new Timed();
+    public void создаемЭкземплярОбъектаВремя() { time = new Timed(5, 10);
     }
 
     @When("Задали будильник с точным временем")
     public void задалиБудильникСТочнымВременем() {
-        clock = new Clock(new Timed(5, 10));
+        clock = new Clock(time);
     }
 
     @Then("У будильника задано наше время")
     public void уБудильникаЗаданоНашеВремя() {
-        Assert.assertEquals(new Timed(5,10), clock.getTime());
+        Assert.assertEquals(time, clock.getTime());
     }
 }
