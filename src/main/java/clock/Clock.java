@@ -4,6 +4,8 @@ import timed.Timed;
 
 public class Clock {
     private Timed timed;
+    private int alarmed;
+    private Timed signalTime;
 
     public Clock(Timed timed){
         this.timed = timed;
@@ -13,13 +15,15 @@ public class Clock {
         return timed;
     }
 
-    public void setSignal(Timed time) {
+    public void setSignal(Timed timed) {
+        signalTime = timed;
     }
 
-    public void setAlarm(int i) {
+    public void setAlarm(int alarmed) {
+        this.alarmed = alarmed;
     }
 
     public boolean signalAlarm() {
-        return true;
+         return timed.sub(signalTime) < alarmed && timed.sub(signalTime) >= 0;
     }
 }

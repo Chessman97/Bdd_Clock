@@ -56,6 +56,8 @@ public class MyStepdefs {
 
     @Then("^Будильник звучит заданное количество минут$")
     public void будильникЗвучитЗаданноеКоличествоМинут() {
-        Assert.assertEquals(false, clock.signalAlarm());
+        Assert.assertEquals(true, clock.signalAlarm());
+        time.setTime(5, 14);
+        Assert.assertEquals(true, clock.signalAlarm());
     }
 }

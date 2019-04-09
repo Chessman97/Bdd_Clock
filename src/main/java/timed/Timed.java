@@ -24,4 +24,8 @@ public class Timed {
     public int getMinute() {
         return minute;
     }
+
+    public int sub(Timed time) {
+        return getMinute() - time.getMinute();
+    }
 }
