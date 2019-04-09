@@ -34,10 +34,12 @@ public class MyStepdefs {
 
     @When("^Указали точное время$")
     public void указалиТочноеВремя() {
-        
+        time.setTime(5, 10);
     }
 
     @Then("^Получили верное время в часах и минутах$")
     public void получилиВерноеВремяВЧасахИМинутах() {
+        Assert.assertEquals(5, time.getHour());
+        Assert.assertEquals(10, time.getMinute());
     }
 }
