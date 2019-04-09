@@ -1,4 +1,5 @@
 import clock.Clock;
+import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -41,5 +42,18 @@ public class MyStepdefs {
     public void получилиВерноеВремяВЧасахИМинутах() {
         Assert.assertEquals(5, time.getHour());
         Assert.assertEquals(10, time.getMinute());
+    }
+
+    @When("^Задаем время сигнала будильника$")
+    public void задаемВремяСигналаБудильника() {
+        
+    }
+
+    @And("^Задаем продолжительность сигнала будильника$")
+    public void задаемПродолжительностьСигналаБудильника() {
+    }
+
+    @Then("^Будильник звучит заданное количество минут$")
+    public void будильникЗвучитЗаданноеКоличествоМинут() {
     }
 }
