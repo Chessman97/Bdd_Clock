@@ -28,4 +28,13 @@ public class Timed {
     public int sub(Timed time) {
         return getMinute() - time.getMinute();
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj instanceof Timed) {
+            Timed t = (Timed) obj;
+            return getHour() == t.getHour() && getMinute() == t.getMinute();
+        }
+        return false;
+    }
 }

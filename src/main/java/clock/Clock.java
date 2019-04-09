@@ -15,15 +15,19 @@ public class Clock {
         return timed;
     }
 
-    public void setSignal(Timed timed) {
-        signalTime = timed;
+    public void setSignal(Timed time) {
+        signalTime = time;
     }
 
-    public void setAlarm(int alarmed) {
-        this.alarmed = alarmed;
+    public void setAlarm(int alarm) {
+        alarmed = alarm;
     }
 
     public boolean signalAlarm() {
          return timed.sub(signalTime) < alarmed && timed.sub(signalTime) >= 0;
+    }
+
+    public void setTime(Timed time) {
+        this.timed = time;
     }
 }
