@@ -1,22 +1,27 @@
 package timed;
 
 public class Timed {
+    private int hour;
+    private int minute;
 
     public Timed() {
 
     }
     public Timed(int hour, int minute) {
-
+        this.hour = hour;
+        this.minute = minute;
     }
 
-    public void setTime(int i, int i1) {
+    public void setTime(int hour, int minute) {
+        this.hour = hour;
+        this.minute = minute;
     }
 
     public int getHour() {
-        return 0;
+        return hour;
     }
 
     public int getMinute() {
-        return 0;
+        return minute;
     }
 }
