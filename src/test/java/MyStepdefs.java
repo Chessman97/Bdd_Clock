@@ -29,7 +29,7 @@ public class MyStepdefs {
 
     @Given("^Создаем экземляр объекта время$")
     public void создаемЭкземлярОбъектаВремя() {
-        
+        time = new Timed();
     }
 
     @When("^Указали точное время$")
