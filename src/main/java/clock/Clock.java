@@ -12,4 +12,14 @@ public class Clock {
     public Timed getTime() {
         return timed;
     }
+
+    public void setSignal(Timed time) {
+    }
+
+    public void setAlarm(int i) {
+    }
+
+    public boolean signalAlarm() {
+        return true;
+    }
 }

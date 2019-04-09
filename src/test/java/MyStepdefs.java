@@ -46,14 +46,16 @@ public class MyStepdefs {
 
     @When("^Задаем время сигнала будильника$")
     public void задаемВремяСигналаБудильника() {
-        
+        clock.setSignal(time);
     }
 
     @And("^Задаем продолжительность сигнала будильника$")
     public void задаемПродолжительностьСигналаБудильника() {
+        clock.setAlarm(3);
     }
 
     @Then("^Будильник звучит заданное количество минут$")
     public void будильникЗвучитЗаданноеКоличествоМинут() {
+        Assert.assertEquals(false, clock.signalAlarm());
     }
 }
